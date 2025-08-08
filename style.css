@@ -1,0 +1,189 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --bg-color: #111111;
+    --text-color: #E0E0E0;
+    --primary-color: #FFFFFF;
+    --secondary-color: #888888;
+    --card-bg-color: #1a1a1a;
+    --border-color: #2e2e2e;
+    --font-main: 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- Header Section --- */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+header .status {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: #2bff88;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* --- Social Links --- */
+.social-links {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.social-links a {
+    margin: 0 15px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* --- About Section --- */
+.about {
+    max-width: 650px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* --- Projects Section --- */
+.projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* For scroll animation */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    padding: 20px 20px 5px 20px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    padding: 0 20px 20px 20px;
+}
+
+.project-card .project-link {
+    display: inline-block;
+    padding: 0 20px 20px 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* --- Footer Section --- */
+footer {
+    text-align: center;
+    margin-top: 100px;
+    padding: 40px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+footer h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+footer a {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* Stack projects vertically */
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    footer h2 {
+        font-size: 1.5rem;
+    }
+}
