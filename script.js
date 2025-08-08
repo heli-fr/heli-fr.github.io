@@ -1,26 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
 
-    // Select all the elements we want to animate
-    const animatedElements = document.querySelectorAll('.project-card');
-
-    // Create an observer
     const observer = new IntersectionObserver((entries) => {
-        // Loop over the entries
-        entries.forEach(entry => {
-            // If the element is visible
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // Add the 'visible' class to it
-                entry.target.classList.add('visible');
+                // Add a delay based on the card's index
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 100); // 100ms delay between cards
+
+                // Stop observing the card once it's visible
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        // Optional: start animation when element is 20% visible
-        threshold: 0.1 
+        threshold: 0.1
     });
 
-    // Tell the observer to watch each of our animated elements
-    animatedElements.forEach(element => {
-        observer.observe(element);
+    cards.forEach(card => {
+        observer.observe(card);
     });
-
 });
