@@ -3,74 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Designer & Developer</title>
+    <title>Your Name - Web Designer</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
     <div class="container">
+        <nav>
+            <div class="logo">
+                <a href="#">YOUR LOGO</a>
+            </div>
+            <div class="nav-links">
+                <a href="#">Work</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+
         <header>
-            <h1>Your Name</h1>
-            <p class="subtitle">Designer & Developer based in Your City</p>
-            <div class="status">
-                <span class="status-indicator"></span>
-                Available for work
+            <h1>
+                <img src="assets/profile.jpg" alt="Your Profile Picture" class="profile-pic">
+                I'm Your Name, a web designer at Company. Interested in creating well-designed apps for builders and thinkers.
+            </h1>
+            <div class="availability">
+                <span class="status-dot"></span>
+                Available for new opportunities
             </div>
         </header>
 
         <main>
-            <section class="social-links">
-                <a href="#" target="_blank">Twitter</a>
-                <a href="#" target="_blank">Dribbble</a>
-                <a href="#" target="_blank">GitHub</a>
-                <a href="#" target="_blank">LinkedIn</a>
-            </section>
-
-            <section class="about">
-                <p>
-                    A brief and engaging paragraph about yourself. Talk about your passion for design and development, the kind of work you do, and what you're looking for. Keep it concise and impactful.
-                </p>
-            </section>
-
-            <section class="projects">
-                <h2>Featured Work</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <img src="assets/project1.jpg" alt="Description of Project 1">
+            <div class="content-grid">
+                <div class="card">
+                    <img src="assets/project1.png" alt="Project One Mockup">
+                    <div class="card-content">
                         <h3>Project Title One</h3>
-                        <p>A short description of the project and your role.</p>
-                        <a href="#" class="project-link">View Project &rarr;</a>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="assets/project2.jpg" alt="Description of Project 2">
-                        <h3>Project Title Two</h3>
-                        <p>A short description of the project and your role.</p>
-                        <a href="#" class="project-link">View Project &rarr;</a>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="assets/project3.jpg" alt="Description of Project 3">
-                        <h3>Project Title Three</h3>
-                        <p>A short description of the project and your role.</p>
-                        <a href="#" class="project-link">View Project &rarr;</a>
-                    </div>
-
-                    <div class="project-card">
-                        <img src="assets/project4.jpg" alt="Description of Project 4">
-                        <h3>Project Title Four</h3>
-                        <p>A short description of the project and your role.</p>
-                        <a href="#" class="project-link">View Project &rarr;</a>
+                        <p>A brief summary of what this project is about and what you did.</p>
                     </div>
                 </div>
-            </section>
+
+                <div class="card">
+                    <img src="assets/project2.png" alt="Project Two Mockup">
+                     <div class="card-content">
+                        <h3>Project Title Two</h3>
+                        <p>A brief summary of what this project is about and what you did.</p>
+                    </div>
+                </div>
+
+                <div class="card card-personal-photo">
+                     <img src="assets/personal-photo.jpg" alt="A photo of you">
+                </div>
+
+                <div class="card">
+                    <img src="assets/project3.png" alt="Project Three Mockup">
+                     <div class="card-content">
+                        <h3>Project Title Three</h3>
+                        <p>A brief summary of what this project is about and what you did.</p>
+                    </div>
+                </div>
+
+                </div>
         </main>
 
-        <footer>
-            <h2>Let's work together</h2>
-            <a href="mailto:your.email@example.com">your.email@example.com</a>
-        </footer>
     </div>
 
 </body>
